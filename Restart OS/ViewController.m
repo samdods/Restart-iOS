@@ -8,22 +8,25 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
-- (void)viewDidLoad
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  return 1;
 }
 
-- (void)didReceiveMemoryWarning
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MyCell" forIndexPath:indexPath];
+  
+  cell.layer.cornerRadius = 1;
+  
+  UIView *subView = [[UIView alloc] initWithFrame:cell.bounds];
+  [cell addSubview:subView];
+  subView.layer.shadowOpacity = 1;
+  subView.layer.borderWidth = 1;
+  
+  return cell;
 }
 
 @end
