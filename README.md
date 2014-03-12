@@ -1,6 +1,6 @@
 # How to restart iOS in 20 lines of code
 
-Download this project and install the app on your iOS device. It will allow you to restart the operating system with the tap of the screen!
+Download this project and install the app on your iOS device. It will allow you to restart the operating system with a tap of the screen!
 
 # Requirements
 
@@ -27,7 +27,7 @@ The only lines of code that do anything in this app are the following:
 }
 ```
 
-The lines of code marked with a `// *` have been identified as the cause of the problem. There may be other ways to acheive the same result, but by having these three lines of code in the app, the app will cause the operating system to crash.
+The lines of code that cause the operating system to restart are highlighted with a comment. There may be other ways to acheive the same result, but by having these lines of code in the app, the app will cause the operating system to crash and restart.
 
 It's very simple when broken down:
 * Dequeue a collection view cell in the usual way and add a subview to it
