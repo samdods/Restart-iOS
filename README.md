@@ -31,9 +31,9 @@ The lines of code that cause the operating system to restart are highlighted wit
 
 It's very simple when broken down:
 * Dequeue a collection view cell in the usual way and add a subview to it
-* Set the cell's corner radius to 1 point
-* Set the subview's shadow opacity to 1
-* Set the subview's border width to 1 point
+* Set the cell's corner radius to non-zero
+* Set the subview's shadow opacity to non-zero
+* Set the subview's border width to non-zero
 
 Easy, huh? By removing any one of these lines, this app will not cause the OS to restart.
 
