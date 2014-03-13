@@ -1,6 +1,6 @@
 # How to restart iOS in 20 lines of code
 
-Download this project and install the app on your iOS device. It will allow you to restart the operating system with a tap of the screen!
+Download this project and install the app on your iOS device. It will allow you to seemingly restart the operating system by simply opening the app!
 
 # Requirements
 
@@ -27,7 +27,7 @@ The only lines of code that do anything in this app are the following:
 }
 ```
 
-The lines of code that cause the operating system to restart are highlighted with a comment. There may be other ways to acheive the same result, but by having these lines of code in the app, the app will cause the operating system to crash and restart.
+There may be other ways to acheive the same result, but by having these lines of code in the app, the app will cause SpringBoard to crash and restart, appearing to the average user that the operating system has restarted.
 
 It's very simple when broken down:
 * Dequeue a collection view cell in the usual way and add a subview to it
@@ -35,7 +35,7 @@ It's very simple when broken down:
 * Set the subview's shadow opacity to non-zero
 * Set the subview's border width to non-zero
 
-Easy, huh? By removing any one of these lines, this app will not cause the OS to restart.
+Easy, huh? But by removing any one of these lines, the app will run normally with no effect on the processes of the operating system.
 
 # Disclaimer
 
@@ -46,3 +46,7 @@ This works by taking advantage of a bug in **backboardd**, the daemon that runs 
 If you hadn't realised already, this is kind of a joke. I wouldn't expect an app of any size to cause the operating system to crash, least of all an app written in only 20 lines of code. Apple have been made aware of this and are investigating it.
 
 Hopefully with this app in mind, if you notice strange things in your own apps causing the backboardd daemon to terminate after updating to iOS 7.1, you will be able to diagnose the problem more easily.
+
+If you like this project, why not [follow me on twitter][followme]?
+
+[followme]: http://twitter.com/dodsios
